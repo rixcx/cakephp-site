@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry; //他テーブル情報取得
 
 /**
  * Indexes Controller
@@ -11,6 +12,16 @@ use App\Controller\AppController;
  */
 class IndexesController extends AppController
 {
+
+    /**
+     * another table
+     *
+     */
+    public function initialize(){
+        parent::initialize();
+        $this->news = TableRegistry::getTableLocator()->get("news");
+    }
+
     /**
      * Index method
      *
@@ -18,6 +29,7 @@ class IndexesController extends AppController
      */
     public function index()
     {
-      //NOP
+      $news = $this->news->find('all');
+      $this->set(compact('news'));
     }
 }
