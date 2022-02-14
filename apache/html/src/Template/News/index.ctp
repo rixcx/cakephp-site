@@ -15,8 +15,13 @@
                 <td><?= $this->Html->link("more", ['controller' => 'News','action' => 'view', $news->id]) ?></td>
                 <!-- <td><?= $news->has('user') ? $this->Html->link($news->user->name, ['controller' => 'Users', 'action' => 'view', $news->user->id]) : '' ?></td> -->
                 <td><?= h($news->slug) ?></td>
-                <td><?= h($news->date) ?></td>
+                <td><?= $this->Time->format($news->date, __('yyyy/MM/dd')) ?></td>
                 <td><?= h($news->title) ?></td>
+                
+                <?php 
+                  debug($news->formatdate($news->date)); //entityを見に行く
+                  debug($this->Time->format($news->date, __('yyyy/MM/dd'))); //Timeクラス使用
+                ?>
             </tr>
             <?php endforeach; ?>
         </tbody>

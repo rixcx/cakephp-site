@@ -8,9 +8,9 @@
   <?php foreach ($news as $news): ?>
     <tr>
         <td><?= $this->Html->link("more", ['controller' => 'News','action' => 'view', $news->id]) ?></td>
-        <td><?= $news->title ?></td>
-        <td><?= $news->date ?></td>
-        <td><?= $news->body ?></td>
+        <td><?= h($news->title) ?></td>
+        <td><?= $this->Time->format($news->date, __('yyyy/MM/dd')) ?></td>
+        <td><?= h($news->body) ?></td>
     </tr>
   <?php endforeach; ?>
 </table>

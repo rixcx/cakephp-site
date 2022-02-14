@@ -40,4 +40,17 @@ class News extends Entity
         'user' => true,
         'newscategories' => true,
     ];
+    
+    /**
+     * Format date.
+     *
+     * @param object Cake\I18n\FrozenDate
+     * @return \Cake\Http\Response|null|void
+     */
+    public function formatdate($date)
+    {
+      $formatdate = $date->i18nFormat('yyyy年MM月dd日 HH:mm:ss');
+      return $formatdate;
+    
+    }
 }
