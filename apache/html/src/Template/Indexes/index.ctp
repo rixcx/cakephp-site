@@ -1,9 +1,9 @@
 <table>
   <tr>
-    <td>リンク</td>
-    <td>タイトル</td>
-    <td>日付</td>
-    <td>内容</td>
+    <td><?= __('リンク') ?></td>
+    <td><?= __('タイトル') ?></td>
+    <td><?= __('日付') ?></td>
+    <td><?= __('内容') ?></td>
   </tr>
   <?php foreach ($news as $news): ?>
     <tr>

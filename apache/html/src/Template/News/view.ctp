@@ -25,15 +25,15 @@
         </tr>
         <tr>
             <th scope="row"><?= __('Date') ?></th>
-            <td><?= h($news->date) ?></td>
+            <td><?= $this->Time->format($news->date, __('yyyy/MM/dd')) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created At') ?></th>
-            <td><?= h($news->created_at) ?></td>
+            <td><?= $this->Time->format($news->created_at, __('yyyy/MM/dd HH:mm:ss')) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Updated At') ?></th>
-            <td><?= h($news->updated_at) ?></td>
+            <td><?= $this->Time->format($news->updated_at, __('yyyy/MM/dd HH:mm:ss')) ?></td>
         </tr>
     </table>
     <div class="row">
