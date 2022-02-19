@@ -1,4 +1,8 @@
-<h1><?= __('Title') ?></h1>
+<?php
+$this->assign('title', 'All Users');
+?>
+
+<h1><?= __('Site Title') ?></h1>
 
 <h2><?= __('News') ?></h2>
 <table>
@@ -17,3 +21,7 @@
     </tr>
   <?php endforeach; ?>
 </table>
+<?= $this->Html->link("一覧を見る", ['controller' => 'News','action' => 'index']) ?>
+
+<h2><?= __('Menus') ?></h2>
+<?= $this->Html->link("メニューを見る", ['controller' => 'Menus','action' => 'index']) ?>
