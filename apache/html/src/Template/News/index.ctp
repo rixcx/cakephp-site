@@ -1,3 +1,9 @@
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var \App\Model\Entity\News[]|\Cake\Collection\CollectionInterface $news
+ */
+?>
 <div>
     <h3><?= __('News') ?></h3>
     <table>
