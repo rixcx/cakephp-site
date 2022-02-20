@@ -76,6 +76,16 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/news/*', ['controller' => 'News', 'action' => 'view']);
 
     /**
+     * Admin URL Settings
+     */
+    Router::prefix('admin', function ($routes) {
+        // この全てのルートは `/admin` によってプレフィックスされます。
+        // そのために、 prefix => admin をルート要素として追加します。
+        $routes->fallbacks(DashedRoute::class);
+        $routes->connect('/', ['controller' => 'Indexes', 'action' => 'index']);
+    });
+
+    /**
      * Connect catchall routes for all controllers.
      *
      * Using the argument `DashedRoute`, the `fallbacks` method is a shortcut for
