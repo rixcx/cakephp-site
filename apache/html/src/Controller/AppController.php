@@ -51,5 +51,41 @@ class AppController extends Controller
          * see https://book.cakephp.org/3.0/en/controllers/components/security.html
          */
         //$this->loadComponent('Security');
+        
+        /*
+         * ログイン機能（AuthComponent）
+         */
+        $this->loadComponent('Flash');
+        $this->loadComponent('Auth',[
+            'authenticate' => [
+                'Form' => [
+                    'userModel' => 'users', //認証に使うモデル（テーブル）の指定
+                    'fields' => [ // ユーザー名とパスワードに使うカラムの指定。省略した場合はusernameとpasswordになる
+                    'username' => 'username',
+                    'password' => 'password'
+                    ]
+                ]
+            ],
+            'loginAction' => [ //ログインを行う画面
+              'controller' => 'Login',
+              'action' => 'index'
+            ],
+            'loginRedirect' => [ //ログイン後表示される画面
+                'controller' => 'Home',
+                'action' => 'index'
+            ],
+            'logoutRedirect' => [ //ログアウト後表示される画面
+                'controller' => 'Indexes',
+                'action' => 'index',
+                'home'
+            ],
+            'unauthorizedRedirect' => $this->referer() // 未認証時、元のページを返します。
+        ]);
     }
+    
+    public function beforeFilter(Event $event)
+    {
+        $this->Auth->allow(); //一旦すべて許可、下層で拒否
+    }
+    
 }

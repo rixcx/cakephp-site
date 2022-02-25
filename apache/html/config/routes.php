@@ -82,7 +82,8 @@ Router::scope('/', function (RouteBuilder $routes) {
         // この全てのルートは `/admin` によってプレフィックスされます。
         // そのために、 prefix => admin をルート要素として追加します。
         $routes->fallbacks(DashedRoute::class);
-        $routes->connect('/', ['controller' => 'Indexes', 'action' => 'index']);
+        $routes->connect('/login', ['controller' => 'Login', 'action' => 'index']);
+        $routes->connect('/home', ['controller' => 'Home', 'action' => 'index']);
     });
 
     /**

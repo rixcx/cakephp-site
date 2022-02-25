@@ -2,15 +2,22 @@
 namespace App\Controller\Admin;
 
 use App\Controller\AppController;
+use Cake\Event\Event;
 
 /**
- * Indexes Controller
+ * Home Controller
  *
  *
  * @method \App\Model\Entity\Index[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class IndexesController extends AppController
+class HomeController extends AppController
 {
+
+    public function beforeFilter(Event $event)
+    {
+        $this->Auth->deny();
+    }
+
     /**
      * Index method
      *
