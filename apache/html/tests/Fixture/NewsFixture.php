@@ -49,11 +49,11 @@ class NewsFixture extends TestFixture
                 'id' => 1,
                 'user_id' => 1,
                 'slug' => 'Lorem ipsum dolor sit amet',
-                'date' => '2022-02-13',
+                'date' => '2022-02-25',
                 'title' => 'Lorem ipsum dolor sit amet',
                 'body' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-                'created_at' => '2022-02-13 10:36:49',
-                'updated_at' => '2022-02-13 10:36:49',
+                'created_at' => '2022-02-25 15:24:22',
+                'updated_at' => '2022-02-25 15:24:22',
             ],
         ];
         parent::init();
