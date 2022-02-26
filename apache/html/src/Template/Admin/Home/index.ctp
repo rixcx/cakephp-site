@@ -2,6 +2,6 @@
 $this->assign('title', 'All Users');
 ?>
 
-<h1><?= __('管理画面トップ') ?></h1>
+<?= $this->element('sidebar'); ?>
 
-<?= $this->Html->link("ユーザー一覧", ['controller' => 'Users','action' => 'index']) ?>
+<h1><?= __('管理画面トップ') ?></h1>
