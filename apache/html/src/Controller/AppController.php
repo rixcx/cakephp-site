@@ -75,9 +75,8 @@ class AppController extends Controller
                 'action' => 'index'
             ],
             'logoutRedirect' => [ //ログアウト後表示される画面
-                'controller' => 'Indexes',
-                'action' => 'index',
-                'home'
+                'controller' => 'Login',
+                'action' => 'index'
             ],
             'unauthorizedRedirect' => $this->referer() // 未認証時、元のページを返します。
         ]);

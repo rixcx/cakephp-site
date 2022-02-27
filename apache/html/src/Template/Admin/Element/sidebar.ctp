@@ -16,4 +16,6 @@
         <li><?= $this->Html->link(__('List Menucategories'), ['controller' => 'Menucategories', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Menucategories'), ['controller' => 'Menucategories', 'action' => 'add']) ?></li>
     </ul>
+    
+    <p><?= $this->Html->link(__('ログアウト'), ['controller' => 'Logout', 'action' => 'index']) ?></p>
 </nav>

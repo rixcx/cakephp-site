@@ -84,6 +84,7 @@ Router::scope('/', function (RouteBuilder $routes) {
         $routes->fallbacks(DashedRoute::class);
         $routes->connect('/login', ['controller' => 'Login', 'action' => 'index']);
         $routes->connect('/home', ['controller' => 'Home', 'action' => 'index']);
+        $routes->connect('/logout', ['controller' => 'Logout', 'action' => 'index']);
     });
 
     /**
