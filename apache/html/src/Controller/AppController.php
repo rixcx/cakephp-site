@@ -59,7 +59,7 @@ class AppController extends Controller
         $this->loadComponent('Auth',[
             'authenticate' => [
                 'Form' => [
-                    'userModel' => 'users', //認証に使うモデル（テーブル）の指定
+                    'userModel' => 'Users', //認証に使うモデル（テーブル）の指定
                     'fields' => [ // ユーザー名とパスワードに使うカラムの指定。省略した場合はusernameとpasswordになる
                     'username' => 'username',
                     'password' => 'password'

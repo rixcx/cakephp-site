@@ -1,5 +1,5 @@
 <?php
-$this->assign('title', 'All Users');
+$this->assign('title', 'TOP');
 ?>
 
 <h1><?= __('Site Title') ?></h1>
