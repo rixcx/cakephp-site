@@ -13,6 +13,11 @@ use Cake\Event\Event;
 class HomeController extends AppController
 {
 
+    public function initialize(){
+      parent::initialize();
+      $this->viewBuilder()->setLayout('admin');
+    }
+
     public function beforeFilter(Event $event)
     {
         $this->Auth->deny();

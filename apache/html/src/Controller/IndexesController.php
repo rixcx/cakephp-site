@@ -19,6 +19,7 @@ class IndexesController extends AppController
      */
     public function initialize(){
         parent::initialize();
+        $this->viewBuilder()->setLayout('front');
         $this->news = TableRegistry::getTableLocator()->get("news");
     }
 
