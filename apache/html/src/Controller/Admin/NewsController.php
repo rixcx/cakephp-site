@@ -13,6 +13,15 @@ use App\Controller\AppController;
 class NewsController extends AppController
 {
     /**
+     * Initialize method
+     *
+     */
+    public function initialize(){
+        parent::initialize();
+        $this->viewBuilder()->setLayout('admin');
+    }
+    
+    /**
      * Index method
      *
      * @return \Cake\Http\Response|null

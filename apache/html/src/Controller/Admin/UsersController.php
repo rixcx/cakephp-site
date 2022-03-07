@@ -13,6 +13,14 @@ use Cake\Event\Event;
  */
 class UsersController extends AppController
 {
+    /**
+     * Initialize method
+     *
+     */
+    public function initialize(){
+        parent::initialize();
+        $this->viewBuilder()->setLayout('admin');
+    }
 
     public function beforeFilter(Event $event)
     {

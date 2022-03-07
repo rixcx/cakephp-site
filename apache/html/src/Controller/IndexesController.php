@@ -12,9 +12,8 @@ use Cake\ORM\TableRegistry; //他テーブル情報取得
  */
 class IndexesController extends AppController
 {
-
     /**
-     * another table
+     * Initialize method
      *
      */
     public function initialize(){
