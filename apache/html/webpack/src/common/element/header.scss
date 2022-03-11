@@ -1,0 +1,5 @@
+@use "../global/_forward" as global;
+
+header {
+  background-color: global.$color_yellow;
+}
