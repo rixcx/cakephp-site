@@ -22,7 +22,7 @@
   
   <?= $this->Flash->render() ?>
   
-  <div class="container clearfix">
+  <div class="container">
       <?= $this->fetch('content') ?>
   </div>
   

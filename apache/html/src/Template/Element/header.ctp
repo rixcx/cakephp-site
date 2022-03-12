@@ -1,7 +1,7 @@
-<header>
+<header class="header">
   <h1 class="logo"><img src="/img/common/logo.svg" alt="mk coffee"></h1>
   <nav class="nav">
-    <ul class="nav__list">
+    <ul>
       <li><?= $this->Html->link(__('ABOUT'), ['#link_about']) ?></li>
       <li><?= $this->Html->link(__('NEWS'), ['controller' => 'News','action' => 'index']) ?></li>
       <li><?= $this->Html->link(__('MENU'), ['controller' => 'Menus', 'action' => 'index']) ?></li>

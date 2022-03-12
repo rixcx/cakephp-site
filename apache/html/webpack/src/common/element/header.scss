@@ -1,5 +1,21 @@
 @use "../global/_forward" as global;
 
-header {
+.header {
   background-color: global.$color_yellow;
-}
+  
+  .logo {
+    background-color: darkolivegreen;
+  }
+  
+  .nav {
+  
+  > ul {
+    display: flex;
+    justify-content: space-between;
+    
+      > li {
+        
+      }
+    }
+  }
+} 
