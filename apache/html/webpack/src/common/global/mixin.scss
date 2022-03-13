@@ -1,0 +1,43 @@
+// -------- mixin --------//
+$breakpoint: (
+  sp: "screen and (max-width: 767px)",
+  pc: "screen and (min-width: 768px)",
+);
+
+@mixin mediaquery($device) {
+  @media #{map-get($breakpoint, $device)} {
+    @content;
+  }
+}
+
+@mixin hover {
+  transition: opacity 0.3s;
+  
+    &:hover {
+    opacity: 0.7;
+  }
+}
+
+@mixin body-font {
+  font-family: "Noto Sans Japanese", sans-serif;
+}
+
+.only-pc {
+  @include mediaquery(pc) {
+    display: block;
+  }
+
+  @include mediaquery(sp) {
+    display: none;
+  }
+}
+
+.only-sp {
+  @include mediaquery(pc) {
+    display: none;
+  }
+
+  @include mediaquery(sp) {
+    display: block;
+  }
+}

@@ -1,21 +1,33 @@
-@use "../global/_forward" as global;
+@use "../global/forward" as global;
 
 .header {
-  background-color: global.$color_yellow;
-  
-  .logo {
-    background-color: darkolivegreen;
-  }
-  
-  .nav {
-  
-  > ul {
+  &__inner {
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    display: block;
+    width: 235px;
+    padding: 56px 20px;
+    background-color: global.$main-color;
+  }
+
+  &__nav {
+    > ul {
+      width: 430px;
+      display: flex;
+      justify-content: space-between;
+
       > li {
-        
+        font-size: 20px;
       }
     }
   }
-} 
+}

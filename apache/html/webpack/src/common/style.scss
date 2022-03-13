@@ -1,5 +1,23 @@
+@use "./global/forward" as global;
+
 @use "reset";
 @use "layout";
 @use "element/header";
 
 //吐き出し対象まとめ 各フォルダにstyle！
+
+body {
+  @include global.body-font;
+  font-size: 14px;
+  color: global.$txt-color;
+  line-height: 1.4;
+
+  ::selection {
+
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}

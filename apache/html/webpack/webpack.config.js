@@ -8,7 +8,8 @@ const WebpackFixStyleOnlyEntries = require("webpack-fix-style-only-entries");
 module.exports = {
   //エントリポイント 吐き出す名前と読み込み元
   entry: {
-    "style": './src/style.scss'
+    "style": './src/style.scss',
+    "admin/style": './src/admin/style.scss'
   },
   //出力先
   output: { 

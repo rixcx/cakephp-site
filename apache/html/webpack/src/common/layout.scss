@@ -1,5 +1,8 @@
+@use "./global/forward" as global;
+
 .container {
-  max-width: 1180px;
+  width: 100%;
+  max-width: 1048px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 16px;
 }
