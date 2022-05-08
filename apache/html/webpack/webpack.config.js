@@ -23,7 +23,17 @@ module.exports = {
         //拡張子 .scss、.sass、css を対象
         test: /\.(scss|sass|css)$/i, 
         // 使用するローダーの指定（後ろから順番に適用される）
-        use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ], 
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              url: false,
+            },
+          },
+        'sass-loader'
+        ], 
+        
       },
     ],
   },

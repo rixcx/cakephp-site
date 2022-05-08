@@ -1,5 +1,5 @@
 <?php
-  $cakeTitle = 'Site Title';
+  $cakeTitle = 'mk coffee';
 ?>
 
 <head>

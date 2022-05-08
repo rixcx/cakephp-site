@@ -1,5 +1,311 @@
 @use "../common/global/forward" as global;
 
+@mixin top-content-margin {
+  margin-bottom: 120px;
+
+  @include global.mediaquery(sp) {
+    margin-bottom: 80px;
+  }
+}
+
 .top {
-  margin: 120px auto 0;;
+  margin: 0 auto;
+  overflow-x: hidden;
+
+  .hero {
+    @include top-content-margin;
+    height: 570px;
+    background-image: url("/img/common/img_mv.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include global.mediaquery(sp) {
+      height: 300px;
+    }
+  } //hero
+
+  &__ttl {
+    position: relative;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1em;
+    display: inline-block;
+    font-family: Noto Sans CJK JP;
+    margin-bottom: 60px;
+
+    @include global.mediaquery(sp) {
+      font-size: 36px;
+      margin-bottom: 60px;
+    }
+
+    &::after {
+      content: "";
+      border-bottom: 4px global.$main-color solid;
+      width: 50px;
+      position: absolute;
+      bottom: -20px;
+      left: 0px;
+    }
+  }
+
+  &__btn {
+    > a {
+      width: 400px;
+      margin: 0 auto;
+      padding: 15px;
+      display: block;
+      text-align: center;
+      border: 1px global.$txt-color solid;
+      transition: 0.3s;
+
+      @include global.mediaquery(sp) {
+        width: 90%;
+      }
+
+      &:hover {
+        color: #fff;
+        border-color: global.$main-color;
+        background-color: global.$main-color;
+      }
+    }
+  }
+
+  .about {
+    @include top-content-margin;
+
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+
+      @include global.mediaquery(sp) {
+        flex-direction: column;
+      }
+    }
+
+    &__conts {
+      width: 414px;
+
+      @include global.mediaquery(sp) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__img {
+      width: calc(500px + ((100vw - 1016px) / 2));
+      margin-right: calc((-100vw + 1016px) / 2);
+      height: 514px;
+      border-radius: 8px 0 0 8px;
+      background-image: url("/img/common/img_about.png");
+      background-size: cover;
+      background-position: center left;
+      background-repeat: no-repeat;
+
+      @media screen and (max-width: 1060px) {
+        width: 50%;
+        margin-right: -15px;
+        background-position: center;
+      }
+
+      @include global.mediaquery(sp) {
+        width: 100%;
+        height: 250px;
+        border-radius: 4px;
+        margin: 0;
+      }
+    }
+  } //about
+
+  .news {
+    @include top-content-margin;
+
+    &__wrap {
+      background-color: global.$bg-color01;
+      margin: 0 calc(50% - 50vw);
+      padding: 70px calc(50vw - 50%);
+      width: 100vw;
+
+      @include global.mediaquery(sp) {
+        padding: 80px calc(50vw - 50%) 80px;
+      }
+    }
+
+    &__list {
+      display: flex;
+      margin-bottom: 60px;
+
+      @include global.mediaquery(sp) {
+        flex-direction: column;
+      }
+
+      > li {
+        width: 33%;
+        border-radius: 8px;
+        @include global.hover;
+        position: relative;
+
+        @include global.mediaquery(sp) {
+          width: 100%;
+        }
+
+        &:after {
+          position: absolute;
+          bottom: 35px;
+          right: 30px;
+          content: "";
+          width: 130px;
+          height: 15px;
+          border-bottom: solid global.$txt-color 1px;
+          border-right: solid global.$txt-color 1px;
+          transform: skew(45deg);
+          transition: 0.3s;
+
+          @include global.mediaquery(sp) {
+            bottom: 15px;
+          }
+        }
+
+        &:hover {
+          background-color: #fff;
+
+          &:after {
+            @include global.hover;
+            right: 27px;
+          }
+        }
+
+        > a {
+          display: block;
+          padding: 30px 30px 80px 30px;
+          height: 100%;
+
+          @include global.mediaquery(sp) {
+            padding: 15px 15px 40px 15px;
+          }
+        }
+      }
+    }
+
+    &__time {
+      margin-bottom: 5px;
+      font-size: 18px;
+      color: #808080;
+
+      @include global.mediaquery(sp) {
+        font-size: 14px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 10px;
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 1.6em;
+
+      @include global.mediaquery(sp) {
+        font-size: 18px;
+      }
+    }
+
+    &__body {
+      color: #555;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+
+      @include global.mediaquery(sp) {
+        -webkit-line-clamp: 2;
+      }
+    }
+  } //news
+
+  .menus {
+    @include top-content-margin;
+
+    &__txt {
+      margin: 20px auto 50px;
+      text-align: center;
+    }
+  } //menus
+
+  .access {
+    @include top-content-margin;
+
+    &__bg {
+      background-color: global.$bg-color02;
+      margin: 0 calc(50% - 50vw);
+      padding: 70px calc(50vw - 50%) 70px;
+      width: 100vw;
+      color: #fff;
+    }
+
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include global.mediaquery(sp) {
+        flex-direction: column;
+      }
+    }
+
+    &__map {
+      width: 586px;
+      height: 430px;
+      
+      > iframe {
+        border-radius: 8px;
+      }
+
+      @include global.mediaquery(sp) {
+        width: 100%;
+        height: 500px;
+        margin-bottom: 20px;
+        
+        > iframe {
+          border-radius: 4px;
+        }
+      }
+    }
+
+    &__conts {
+      width: 328px;
+
+      @include global.mediaquery(sp) {
+        width: 100%;
+      }
+
+      &__ttl {
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      &__info {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        dt,
+        dd {
+          font-weight: normal;
+        }
+
+        dt {
+          width: 5em;
+        }
+
+        dd {
+          width: calc(100% - 5em);
+
+          &:before {
+            content: "：";
+          }
+        }
+      }
+    }
+  } //access
 }

@@ -3,18 +3,13 @@
 @use "reset";
 @use "layout";
 @use "element/header";
-
-//吐き出し対象まとめ 各フォルダにstyle！
+@use "element/footer";
 
 body {
   @include global.body-font;
   font-size: 14px;
   color: global.$txt-color;
-  line-height: 1.4;
-
-  ::selection {
-
-  }
+  line-height: 1.8;
 }
 
 img {

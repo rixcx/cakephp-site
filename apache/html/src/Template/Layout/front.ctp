@@ -18,14 +18,14 @@
 <head>
   <?= $this->element('head') ?>
 <body>
-<h1>フロントレイアウト</h1>
   <?= $this->element('header') ?>
   
   <?= $this->Flash->render() ?>
   
-  <div class="container clearfix">
-      <?= $this->fetch('content') ?>
-  </div>
+  <main class="main">
+    <div class="sp-cover"></div>
+    <?= $this->fetch('content') ?>
+  </main>
   
   <?= $this->element('footer') ?>
 </body>
